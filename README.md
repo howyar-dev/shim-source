@@ -35,8 +35,6 @@ docker build --output type=local,dest=./output .
 sha256sum output/shimx64.efi
 ```
 
-150fdd153fbfa0b489afa85367cc0507ab778bad61529621b0dcf65ee10b726f  output/shimx64.efi
-
 
 
 ### File Type
@@ -44,8 +42,6 @@ sha256sum output/shimx64.efi
 ```
 file output/shimx64.efi
 ```
-
-output/shimx64.efi: PE32+ executable (EFI application) x86-64 (stripped to external PDB), for MS Windows
 
 
 
@@ -55,11 +51,6 @@ output/shimx64.efi: PE32+ executable (EFI application) x86-64 (stripped to exter
 objcopy --dump-section .sbat=/dev/stdout output/shimx64.efi 2>/dev/null
 ```
 
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
-
-
-
 
 
 ## Files Included
@@ -67,7 +58,7 @@ shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
 - `vendor.cer` - Embedded certificate (DER format)
 - `Dockerfile` - Reproducible build environment definition
 - `build-logs/` - Complete build logs from the build process
-  - `docker-build.log` - Main build log
+- `docker-build.log` - Main build log
 
 ## Build Environment
 
